@@ -8,3 +8,6 @@
 #### Installation of snap packages for testing
 * sudo snap install hello-world
 * sudo snap install foliate
+
+#### To apply the remove.sls state
+* salt-call --local state.apply
