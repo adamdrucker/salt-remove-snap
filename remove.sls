@@ -16,6 +16,8 @@ rmv-snap-core:
   cmd.run:
     - name: "sudo snap remove core"
 
+# Assuming this is ran as root, this will remove the snap dir
+# from the root home dir, not for any other users
 rmv-snaphome:
   cmd.run:
     - name: "rm -rf ~/snap"
