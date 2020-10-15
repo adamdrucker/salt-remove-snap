@@ -28,6 +28,10 @@ rmv-snapvar:
   cmd.run:
     - name: "sudo rm -rf /var/snap"
 
-rmv-snapd:
+rmv-snapd-yum:
   cmd.run:
     - name: "sudo yum remove snapd -y"
+
+rmv-snapd-varlib:
+  cmd.run:
+    - name: "sudo rm -rf /var/lib/snapd"
