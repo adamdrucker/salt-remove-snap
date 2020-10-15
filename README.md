@@ -1,7 +1,7 @@
 ### Salt state to remove all installed snaps
 
 #### To install Snap (using CentOS 8)
-* sudo yum install snapd
+* sudo yum install snapd -y
 * sudo systemctl enable --now snapd.socket
 * sudo ln -s /var/lib/snapd/snap /snap
 
@@ -10,4 +10,4 @@
 * sudo snap install foliate
 
 #### To apply the remove.sls state
-* salt-call --local state.apply
+* sudo salt-call --local state.apply
