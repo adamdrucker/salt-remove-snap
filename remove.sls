@@ -2,36 +2,32 @@
 
 rmv-snaps:
   cmd.run:
-    - name: "for i in $(snap list | awk '{print $1}' | tail -n+4); do sudo snap remove $i; done"
+    - name: "for i in $(snap list | awk '{print $1}' | tail -n+4); do snap remove $i; done"
 
 rmv-core18:
   cmd.run:
-    - name: "sudo snap remove core18"
+    - name: "snap remove core18"
 
 unmnt-snap:
   cmd.run:
-    - name: "sudo umount $(df | grep /snapd/snap/core/ | awk '{print $6}')"
+    - name: "umount $(df | grep /snapd/snap/core/ | awk '{print $6}')"
 
 rmv-snap-core:
   cmd.run:
-    - name: "sudo snap remove core"
-
-rmv-snaphome:
-  cmd.run:
-    - name: "rm -rf ~/snap"
+    - name: "snap remove core"
 
 rmv-snaproot:
   cmd.run:
-    - name: "sudo rm -rf /snap"
+    - name: "rm -rf /snap"
 
 rmv-snapvar:
   cmd.run:
-    - name: "sudo rm -rf /var/snap"
+    - name: "rm -rf /var/snap"
 
 rmv-snapd-yum:
   cmd.run:
-    - name: "sudo yum remove snapd -y"
+    - name: "yum remove snapd -y"
 
 rmv-snapd-varlib:
   cmd.run:
-    - name: "sudo rm -rf /var/lib/snapd"
+    - name: "rm -rf /var/lib/snapd"
