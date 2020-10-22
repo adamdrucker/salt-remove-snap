@@ -11,3 +11,6 @@
 
 #### To apply the remove.sls state
 * sudo salt-call --local state.apply
+
+
+22 Oct - updated remove.sls to reflect usage under root
